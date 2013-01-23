@@ -978,6 +978,8 @@ namespace Quartz.Core
             }
 
             var trigger = (IOperableTrigger) newTrigger;
+            DateTimeOffset? nextFireTimeUtc = trigger.GetNextFireTimeUtc();
+
             ITrigger oldTrigger = GetTrigger(triggerKey);
             if (oldTrigger == null)
             {
@@ -994,6 +996,11 @@ namespace Quartz.Core
             }
 
             DateTimeOffset? ft = trigger.ComputeFirstFireTimeUtc(cal);
+
+            if (nextFireTimeUtc != null)
+            {
+                trigger.SetNextFireTimeUtc(nextFireTimeUtc);                
+            }
 
             if (!ft.HasValue)
             {
