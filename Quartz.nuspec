@@ -10,6 +10,9 @@
     <dependencies>
       <dependency id="Common.Logging" version="2.1.1" />
     </dependencies>
+    <references>
+      <reference file="C5.dll"/>
+    </references>
   </metadata>
   <files>
     <file src="build\4.0\release\Quartz\Quartz.dll" target="lib\net40" />
@@ -17,7 +20,4 @@
     <file src="build\4.0\release\Quartz\Quartz.xml" target="lib\net40" />
     <file src="build\4.0\release\Quartz\Quartz.pdb" target="lib\net40" />
   </files>
-  <references>
-    <reference file="C5.dll"/>
-  </references>
 </package>
