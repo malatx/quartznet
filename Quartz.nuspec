@@ -12,6 +12,7 @@
     </dependencies>
     <references>
       <reference file="C5.dll"/>
+      <reference file="Quartz.dll"/>
     </references>
   </metadata>
   <files>
